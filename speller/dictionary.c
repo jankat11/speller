@@ -19,7 +19,7 @@ node;
 
 int size_of_dict;
 
-// TODO: Choose number of buckets in hash table
+// Choose number of buckets in hash table
 const unsigned int N = 728;
 
 // Hash table
@@ -29,8 +29,6 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
-
     node *temp = NULL;
 
 
@@ -116,15 +114,12 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
     return size_of_dict;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
-
     for (int i = 0; i < N; i++)
     {
         while (table[i] != NULL)
