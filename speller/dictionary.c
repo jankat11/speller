@@ -30,19 +30,13 @@ node *table[N];
 bool check(const char *word)
 {
     node *temp = NULL;
-
-
-
     for (temp = table[hash(word)]; temp != NULL; temp = temp->next)
     {
-
         if (strcasecmp(word, temp->word) == 0)
         {
-
             return true;
         }
     }
-
     return false;
 }
 
@@ -62,9 +56,7 @@ unsigned int hash(const char *word)
     {
         return 701 + toupper(word[0])  - 'A' + 1;
     }
-
     return 0;
-
 }
 
 // Loads dictionary into memory, returning true if successful, else false
